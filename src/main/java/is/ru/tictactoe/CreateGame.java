@@ -34,7 +34,7 @@ public class CreateGame{
 		    String str = s.nextLine();
 		    input = str.charAt(0);
 		    // The right side of the || is bool (is the move legal)
-		    while(!validateInput(input) || !/*isLegalMove(input)*/ false)
+		    while(!validateInput(input) || !validateMove(input))
 		    {
 		        System.out.println("Illegal move!, Try again");
 		        getUserInput(input);
@@ -52,6 +52,71 @@ public class CreateGame{
 		    return true;
 		}
 
-
-
+        public static boolean validateMove (char num) 
+        {
+            if (num == '1') 
+            {
+                if (arr[0][0] == 'X' || arr[0][0] == 'O' )
+                {
+                    return false;
+                }
+            }
+            if (num == '2') 
+            {
+                if (arr[0][1] == 'X' || arr[0][1] == 'O')
+                {
+                    return false;
+                }
+            }
+            if (num == '3') 
+            {
+                if (arr[0][2] == 'X' || arr[0][2] == 'O')
+                {
+                    return false;
+                }
+            }
+            if (num == '4') 
+            {
+                if (arr[1][0] == 'X' || arr[1][0] == 'O')
+                {
+                    return false;
+                }
+            }
+            if (num == '5') 
+            {
+                if (arr[1][1] == 'X' || arr[1][1] == 'O')
+                {
+                    return false;
+                }
+            }
+            if (num == '6') 
+            {
+                if (arr[1][2] == 'X' || arr[1][2] == 'O')
+                {
+                    return false;
+                }
+            }
+            if (num == '7') 
+            {
+                if (arr[2][0] == 'X' || arr[2][0] == 'O')
+                {
+                    return false;
+                }
+            }
+            if (num == '8') 
+            {
+                if (arr[2][1] == 'X' || arr[2][1] == 'O')
+                {
+                    return false;
+                }
+            }
+            if (num == '9') 
+            {
+                if (arr[2][2] == 'X' || arr[2][2] == 'O')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
 }
