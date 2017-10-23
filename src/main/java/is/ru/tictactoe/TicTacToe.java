@@ -18,11 +18,12 @@ public class TicTacToe{
         return 4567;
         }
 
-        static void makeGame() {
+        static int makeGame() {
             CreateGame newGame = new CreateGame();
             // This is the array for the game board
             char arr [][] = {{'1', '2', '3'},{ '4', '5', '6'},{ '7', '8', '9'}};  
             
             newGame.displayGameBoard(arr);
+            return 1;
         }
 }

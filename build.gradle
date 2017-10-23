@@ -19,6 +19,8 @@ repositories {
 }
 
 dependencies {
+
+    compile 'com.sparkjava:spark-core:2.6.0'
     task stage(dependsOn: ['build', 'clean'])
     build.mustRunAfter clean
     // This dependency is exported to consumers, that is to say found on their compile classpath.
