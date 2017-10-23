@@ -1,14 +1,28 @@
 package is.ru.tictactoe;
-
 import static spark.Spark.*;
 
 public class TicTacToe{
+    
+    
+    
     public static void main(String[] args) {
         
-        port(getHerokuPort());
-        get("/", (req, res) -> makeGame());
+        //port(getHerokuPort());
+        //get("/", (req, res) -> makeGame());
         
+        CreateGame newGame = new CreateGame();
+		//newGame.displayGameBoard(arr);
+        char input = 0;
+
+		int x = newGame.getUserInput(input);
+		System.out.println("USER INPUT: " + x);
+
         }
+
+        
+
+
+
 
         static int getHerokuPort() {
             ProcessBuilder psb = new ProcessBuilder();
@@ -18,12 +32,11 @@ public class TicTacToe{
         return 4567;
         }
 
-        static int makeGame() {
-            CreateGame newGame = new CreateGame();
-            // This is the array for the game board
-            char arr [][] = {{'1', '2', '3'},{ '4', '5', '6'},{ '7', '8', '9'}};  
-            
-            newGame.displayGameBoard(arr);
-            return 1;
-        }
+
+
+
+
+
+
+        
 }
