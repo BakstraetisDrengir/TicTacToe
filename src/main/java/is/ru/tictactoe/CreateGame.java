@@ -10,11 +10,11 @@ public class CreateGame{
     CreateGame(){
         arr = new char[][] {{'1', '2', '3'},{ '4', '5', '6'},{ '7', '8', '9'}};
     }
-        
+
 
         // This method takes in a character array and
         // displays the game board
-        static void displayGameBoard(char arr [][])
+        static char[][] displayGameBoard(char arr [][])
 	    {
             for (int row = 0; row < 3; row++)
             {
@@ -25,6 +25,7 @@ public class CreateGame{
                 }
                 System.out.println();
             }
+            return arr;
 	    }
 
         public static int getUserInput(char input)
@@ -52,65 +53,65 @@ public class CreateGame{
 		    return true;
 		}
 
-        public static boolean validateMove (char num) 
+        public static boolean validateMove (char num)
         {
-            if (num == '1') 
+            if (num == '1')
             {
                 if (arr[0][0] == 'X' || arr[0][0] == 'O' )
                 {
                     return false;
                 }
             }
-            if (num == '2') 
+            if (num == '2')
             {
                 if (arr[0][1] == 'X' || arr[0][1] == 'O')
                 {
                     return false;
                 }
             }
-            if (num == '3') 
+            if (num == '3')
             {
                 if (arr[0][2] == 'X' || arr[0][2] == 'O')
                 {
                     return false;
                 }
             }
-            if (num == '4') 
+            if (num == '4')
             {
                 if (arr[1][0] == 'X' || arr[1][0] == 'O')
                 {
                     return false;
                 }
             }
-            if (num == '5') 
+            if (num == '5')
             {
                 if (arr[1][1] == 'X' || arr[1][1] == 'O')
                 {
                     return false;
                 }
             }
-            if (num == '6') 
+            if (num == '6')
             {
                 if (arr[1][2] == 'X' || arr[1][2] == 'O')
                 {
                     return false;
                 }
             }
-            if (num == '7') 
+            if (num == '7')
             {
                 if (arr[2][0] == 'X' || arr[2][0] == 'O')
                 {
                     return false;
                 }
             }
-            if (num == '8') 
+            if (num == '8')
             {
                 if (arr[2][1] == 'X' || arr[2][1] == 'O')
                 {
                     return false;
                 }
             }
-            if (num == '9') 
+            if (num == '9')
             {
                 if (arr[2][2] == 'X' || arr[2][2] == 'O')
                 {

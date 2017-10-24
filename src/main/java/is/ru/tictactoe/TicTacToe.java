@@ -2,24 +2,29 @@ package is.ru.tictactoe;
 import static spark.Spark.*;
 
 public class TicTacToe{
-    
-    
-    
+
+
+
     public static void main(String[] args) {
-        
-        //port(getHerokuPort());
-        //get("/", (req, res) -> makeGame());
-        
-        CreateGame newGame = new CreateGame();
-		//newGame.displayGameBoard(arr);
-        char input = 0;
 
-		int x = newGame.getUserInput(input);
-		System.out.println("USER INPUT: " + x);
+        port(getHerokuPort());
+        get("/", (req, res) -> {
+            return "No route specified. Try /add/1,2";
+        });
+        get(
+            "/add/:input",
+            (req, res) -> StartGame()
+        );
 
-        }
+    }
 
-        
+    public static char[][] StartGame(){
+      char gameBoard[][] = new char[][] {{'1', '2', '3'},{ '4', '5', '6'},{ '7', '8', '9'}};
+      CreateGame newGame = new CreateGame();
+
+      return newGame.displayGameBoard(gameBoard);
+    }
+
 
 
 
@@ -38,5 +43,5 @@ public class TicTacToe{
 
 
 
-        
+
 }
