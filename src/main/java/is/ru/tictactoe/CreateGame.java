@@ -7,28 +7,28 @@ public class CreateGame{
     static char arr [][];
 
     // Constructor
-    CreateGame(){
+    CreateGame()
+    {
         arr = new char[][] {{'1', '2', '3'},{ '4', '5', '6'},{ '7', '8', '9'}};
     }
 
 
-        // This method takes in a character array and
-        // displays the game board
-        static char[][] displayGameBoard(char arr [][])
-	    {
-            for (int row = 0; row < 3; row++)
+    // This method takes in a character array and
+    // displays the game board
+    static char[][] displayGameBoard(char arr [][])
+	{
+        for (int row = 0; row < 3; row++)
             {
                 for (int col = 0; col < 3; col++)
                 {
                     System.out.print(arr[row][col] + " ");
-
                 }
                 System.out.println();
             }
-            return arr;
-	    }
+        return arr;
+	}
 
-        public static int getUserInput(char input)
+    public static int getUserInput(char input)
 		{
 		    System.out.println("Position: ");
 		    Scanner s = new Scanner(System.in);

@@ -9,39 +9,32 @@ public class TicTacToe{
 
         port(getHerokuPort());
         get("/", (req, res) -> {
-            return "No route specified. Try /add/1,2";
-        });
-        get(
-            "/add/:input",
-            (req, res) -> StartGame()
-        );
+            char arr[][] = new char[][] {{'1', '2', '3'},{ '4', '5', '6'},{ '7', '8', '9'}};
+            for (int row = 0; row < 3; row++)
+            {
+                for (int col = 0; col < 3; col++)
+                {
+                    System.out.print(arr[row][col] + " ");
 
+                }
+                System.out.println();
+            }
+            return StartGame();
+        });
     }
 
     public static char[][] StartGame(){
       char gameBoard[][] = new char[][] {{'1', '2', '3'},{ '4', '5', '6'},{ '7', '8', '9'}};
       CreateGame newGame = new CreateGame();
 
-      return newGame.displayGameBoard(gameBoard);
+      return gameBoard;
     }
 
-
-
-
-
-        static int getHerokuPort() {
-            ProcessBuilder psb = new ProcessBuilder();
+    static int getHerokuPort() {
+        ProcessBuilder psb = new ProcessBuilder();
         if (psb.environment().get("PORT") != null) {
             return Integer.parseInt(psb.environment().get("PORT"));
         }
         return 4567;
-        }
-
-
-
-
-
-
-
-
+    }
 }
