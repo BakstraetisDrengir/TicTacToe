@@ -19,4 +19,10 @@ public class TicTacToeTest{
         assertEquals(true,g.validateMove('1'));
     }
 
+    @Test
+    public void testIfMoveIsIllegal(){
+      CreateGame g = new CreateGame();
+      g.markChoice('1');
+      assertEquals(false,g.validateMove('1'));
+    }
 }

@@ -5,11 +5,14 @@ import java.util.Scanner;
 public class CreateGame{
         // The array is a member variable
     static char arr [][];
+    char userInput;
+	  char player;
 
     // Constructor
     CreateGame()
     {
         arr = new char[][] {{'1', '2', '3'},{ '4', '5', '6'},{ '7', '8', '9'}};
+        player = 'X';
     }
 
 
@@ -120,4 +123,64 @@ public class CreateGame{
             }
             return true;
         }
+
+        void markChoice(char input)
+        {
+          if (input == '1')
+          {
+              arr[0][0] = player;
+          }
+
+          else if (input == '2')
+          {
+              arr[0][1] = player;
+          }
+
+          else if (input == '3')
+          {
+              arr[0][2] = player;
+          }
+
+          else if (input == '4')
+          {
+              arr[1][0] = player;
+          }
+
+          else if (input == '5')
+          {
+              arr[1][1] = player;
+          }
+
+          else if (input == '6')
+          {
+              arr[1][2] = player;
+          }
+
+          else if (input == '7')
+          {
+              arr[2][0] = player;
+          }
+
+          else if (input == '8')
+          {
+              arr[2][1] = player;
+          }
+          else if (input == '9')
+          {
+              arr[2][2] = player;
+          }
+
+      }
+
+      void changePlayer()
+    	{
+    	    if (player == 'X')
+    	    {
+    	        player = 'O';
+    	    }
+    	    else
+    	    {
+    	        player = 'X';
+    	    }
+    	}
 }
