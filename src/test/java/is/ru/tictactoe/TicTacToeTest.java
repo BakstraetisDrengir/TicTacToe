@@ -6,11 +6,11 @@ import org.junit.Test;
 public class TicTacToeTest{
     @Test
     public void testInputWithinRange(){
-        assertEquals(true,CreateGame.validateInput('3'));
+        assertEquals(true,CreateGame.checkValidity('3'));
     }
     @Test
     public void testInputOutOfRange(){
-        assertEquals(false,CreateGame.validateInput('0'));
+        assertEquals(false,CreateGame.checkValidity('0'));
     }
 
     @Test
