@@ -9,7 +9,7 @@ public class CreateGame{
 	  char player;
 
     // Constructor
-    CreateGame()
+    public CreateGame()
     {
         arr = new char[][] {{'1', '2', '3'},{ '4', '5', '6'},{ '7', '8', '9'}};
         player = 'X';
@@ -18,26 +18,32 @@ public class CreateGame{
 
     // This method takes in a character array and
     // displays the game board
-    static char[][] displayGameBoard(char arr [][])
+    public void ResetGame() {
+      arr = new char[][] {{'1', '2', '3'},{ '4', '5', '6'},{ '7', '8', '9'}};
+      player = 'X';
+    }
+    static String displayGameBoard()
 	{
-        for (int row = 0; row < 3; row++)
-            {
-                for (int col = 0; col < 3; col++)
-                {
-                    System.out.print(arr[row][col] + " ");
-                }
-                System.out.println();
-            }
-        return arr;
+      String output = "<h1>";
+      for (int row = 0; row < 3; row++)
+      {
+          for (int col = 0; col < 3; col++)
+          {
+              output += arr[row][col] + " ";
+          }
+          output += "<br>";
+      }
+      return output + "</h1>";
 	}
 
     // This method gets and returns the user input
-	public static char getUserInput() {
-		System.out.println("Position: ");
-		Scanner s = new Scanner(System.in);
-		String str = s.nextLine();
-		char input = str.charAt(0);
-		return input;
+	public boolean getUserInput(char input) {
+    if(checkValidity(input) && validateMove(input)) {
+      markChoice(input);
+      changePlayer();
+      return true;
+    }
+		return false;
 	}
 
     // This method checks the validity of the user input
