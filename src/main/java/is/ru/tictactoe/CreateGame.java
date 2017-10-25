@@ -31,30 +31,28 @@ public class CreateGame{
         return arr;
 	}
 
-    public static int getUserInput(char input)
-		{
-		    System.out.println("Position: ");
-		    Scanner s = new Scanner(System.in);
-		    String str = s.nextLine();
-		    input = str.charAt(0);
-		    // The right side of the || is bool (is the move legal)
-		    while(!validateInput(input) || !validateMove(input))
-		    {
-		        System.out.println("Illegal move!, Try again");
-		        getUserInput(input);
-		    }
-		    return input - 48;
-		}
+    // This method gets and returns the user input
+	public static char getUserInput() {
+		System.out.println("Position: ");
+		Scanner s = new Scanner(System.in);
+		String str = s.nextLine();
+		char input = str.charAt(0);
+		return input;
+	}
 
-        public static boolean validateInput(char input)
-		{
-		    int inputIntValue = Character.getNumericValue(input);
-		    if (inputIntValue < 1 || inputIntValue > 9)
-		    {
-		        return false;
-		    }
-		    return true;
+    // This method checks the validity of the user input
+
+	public static boolean checkValidity(char userInput){
+		if(Character.isDigit(userInput)){
+			String s = Character.toString(userInput);
+			int number = Integer.parseInt(s);
+			if(number > 0  && number < 10){
+				return true;
+			}
 		}
+		//System.out.println("Incorrect input!");
+		return false;
+	}
 
         public static boolean validateMove (char num)
         {
