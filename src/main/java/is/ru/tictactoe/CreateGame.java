@@ -40,15 +40,17 @@ public class CreateGame{
 		return input;
 	}
 
-        // This method checks the validity of the user input
-	// This method checks the validity of the user input
+    // This method checks the validity of the user input
+
 	public static boolean checkValidity(char userInput){
 		if(Character.isDigit(userInput)){
-			if((int)userInput > 0  || (int)userInput < 10){
+			String s = Character.toString(userInput);
+			int number = Integer.parseInt(s);
+			if(number > 0  && number < 10){
 				return true;
 			}
 		}
-		System.out.println("Incorrect input!");
+		//System.out.println("Incorrect input!");
 		return false;
 	}
 
