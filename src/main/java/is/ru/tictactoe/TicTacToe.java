@@ -5,6 +5,7 @@ public class TicTacToe{
 
 
     public static void main(String[] args) {
+        staticFileLocation("/public"); 
         CreateGame newGame = new CreateGame();
         port(getHerokuPort());
         get("/newGame", (req, res) -> {
