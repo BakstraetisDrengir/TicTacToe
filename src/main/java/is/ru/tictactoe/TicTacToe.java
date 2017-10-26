@@ -10,18 +10,13 @@ public class TicTacToe{
         port(getHerokuPort());
         
         post(
-            "/",(req, res) -> {
-                String number = req.queryParams("userChoice");
-                return number + 5;
+            "/showTable",(req, res) -> {
+                newGame.ResetGame();
+                return newGame.displayGameBoard();
             }
         );
-        
-        
-        
-        get("/", (req, res) -> {
-            newGame.ResetGame();
-            return newGame.displayGameBoard();
-        });
+
+
         get("/playersMove/:input", (req, res) -> {
           String inputstring = req.params(":input");
           char input = inputstring.charAt(0);
