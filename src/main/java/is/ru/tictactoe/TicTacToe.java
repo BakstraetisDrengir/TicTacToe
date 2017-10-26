@@ -8,7 +8,17 @@ public class TicTacToe{
         staticFileLocation("/public"); 
         CreateGame newGame = new CreateGame();
         port(getHerokuPort());
-        get("/newGame", (req, res) -> {
+        
+        post(
+            "/",(req, res) -> {
+                String number = req.queryParams("userChoice");
+                return number + 5;
+            }
+        );
+        
+        
+        
+        get("/", (req, res) -> {
             newGame.ResetGame();
             return newGame.displayGameBoard();
         });
