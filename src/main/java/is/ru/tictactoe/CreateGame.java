@@ -198,6 +198,18 @@ public class CreateGame{
           return false;
       }
 
+      public boolean colWin()
+      {
+          for (int i = 0 ; i < 3; i++)
+          {
+              if (arr[0][i] == arr[1][i] && arr[1][i] == arr[2][i])
+              {
+                  return true;
+              }
+          }
+          return false;
+      }
+
 
 
 }
