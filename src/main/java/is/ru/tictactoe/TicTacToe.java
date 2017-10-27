@@ -1,20 +1,30 @@
 package is.ru.tictactoe;
+
+import java.net.URLDecoder;
 import static spark.Spark.*;
 
 public class TicTacToe{
 
 
     public static void main(String[] args) {
-        staticFileLocation("/public"); 
+        staticFileLocation("/public");
         CreateGame newGame = new CreateGame();
         port(getHerokuPort());
-        
+
         post(
             "/showBoard",(req, res) -> {
                 newGame.ResetGame();
                 return newGame.displayGameBoard();
             }
         );
+        post("/playersmove", (req, res) -> {
+          String inputstring =  req.queryParams("input");
+          char input = inputstring.charAt(0);
+          if(newGame.getUserInput(input)) {
+            return newGame.displayGameBoard();
+          }
+          return "Error n stuff";
+        });
 
 
         get("/playersMove/:input", (req, res) -> {
