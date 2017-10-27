@@ -34,7 +34,7 @@ public class TicTacToeTest{
       g.getUserInput('2');
       g.getUserInput('5');
       g.getUserInput('3');
-      assertEquals(true, g.rowWin());
+      assertEquals(true, g.isWin());
     }
 
     @Test
@@ -50,7 +50,7 @@ public class TicTacToeTest{
       g.getUserInput('4');
       g.getUserInput('3');
       g.getUserInput('7');
-      assertEquals(true, g.colWin());
+      assertEquals(true, g.isWin());
     }
 
     @Test
@@ -61,7 +61,7 @@ public class TicTacToeTest{
       g.getUserInput('5');
       g.getUserInput('3');
       g.getUserInput('9');
-      assertEquals(true, g.diagnonalWin());
+      assertEquals(true, g.isWin());
     }
 
     @Test
@@ -72,6 +72,21 @@ public class TicTacToeTest{
       g.getUserInput('5');
       g.getUserInput('1');
       g.getUserInput('7');
-      assertEquals(true, g.diagnonalWin());
+      assertEquals(true, g.isWin());
+    }
+
+    @Test
+    public void testForDraw() {
+      CreateGame g = new CreateGame();
+      g.getUserInput('1');
+      g.getUserInput('2');
+      g.getUserInput('3');
+      g.getUserInput('4');
+      g.getUserInput('6');
+      g.getUserInput('5');
+      g.getUserInput('7');
+      g.getUserInput('9');
+      g.getUserInput('8');
+      assertEquals(true, g.draw());
     }
 }
