@@ -52,4 +52,26 @@ public class TicTacToeTest{
       g.getUserInput('7');
       assertEquals(true, g.colWin());
     }
+
+    @Test
+    public void TestForWinDiagonalRight(){
+      CreateGame g = new CreateGame();
+      g.getUserInput('1');
+      g.getUserInput('2');
+      g.getUserInput('5');
+      g.getUserInput('3');
+      g.getUserInput('9');
+      assertEquals(true, g.diagnonalWin());
+    }
+
+    @Test
+    public void TestForWinDiagonalLeft(){
+      CreateGame g = new CreateGame();
+      g.getUserInput('3');
+      g.getUserInput('2');
+      g.getUserInput('5');
+      g.getUserInput('1');
+      g.getUserInput('7');
+      assertEquals(true, g.diagnonalWin());
+    }
 }
