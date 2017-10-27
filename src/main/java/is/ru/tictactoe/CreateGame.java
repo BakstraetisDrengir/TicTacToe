@@ -42,6 +42,9 @@ public class CreateGame{
 	public boolean getUserInput(char input) {
     if(checkValidity(input) && validateMove(input)) {
       markChoice(input);
+      if (isWin()) {
+         winner = player;
+      }
       changePlayer();
       counter++;
       draw();
@@ -244,7 +247,10 @@ public class CreateGame{
           else {
             return false;
           }
+      }
 
+      public char getWinner() {
+        return winner;
       }
 
 
