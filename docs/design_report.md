@@ -29,7 +29,7 @@ We decided to implement a simple version of Tic Tac Toe.
 Each player takes turn entering a number and the corresponding square is marked with either a X or an O token.
 
 The 3X3 board is stored in a dimensional array. The players take turns entering a number between 1 and 9 and a function will update the array with corresponding changes.
-Once a player has won the he will recive a message to that effect.
+Once a player has won he will recive a message to that effect.
 
  ## Classes 
 
@@ -50,4 +50,5 @@ To achive a running web application we have three documents:
 
  ## Class diagram
 
- ![alt text](https://github.com/BakstraetisDrengir/TicTacToe/tree/master/docs/img/cd.png "class_diagram") 
+ ![class_diagram](https://github.com/BakstraetisDrengir/TicTacToe/blob/master/docs/img/cd.png?raw=true)
+
