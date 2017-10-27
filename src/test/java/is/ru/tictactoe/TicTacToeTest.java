@@ -38,6 +38,11 @@ public class TicTacToeTest{
     }
 
     @Test
+    public void TestGetPlayer(){
+      CreateGame g = new CreateGame();
+      assertEquals('X', g.getplayer());
+    }
+    @Test
     public void TestForWinInCol(){
       CreateGame g = new CreateGame();
       g.getUserInput('1');
