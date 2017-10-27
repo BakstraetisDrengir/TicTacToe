@@ -176,8 +176,7 @@ public class CreateGame{
 
       }
 
-      void changePlayer()
-    	{
+      private void changePlayer() {
     	    if (player == 'X')
     	    {
     	        player = 'O';
@@ -187,4 +186,18 @@ public class CreateGame{
     	        player = 'X';
     	    }
     	}
+
+      public boolean rowWin() {
+          for (int i = 0; i < 3 ; i++)
+          {
+              if (arr[i][0] == arr[i][1] && arr[i][1] == arr[i][2])
+              {
+                  return true;
+              }
+          }
+          return false;
+      }
+
+
+
 }
