@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<head>
-    <title>TicTacToe</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-
+  <head>
+      <title>TicTacToe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+      <script type="text/javascript" src="script.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css">
+  
   </head>
-        <h1 id="caption">Tic-Tac-Toe</h1>
-        <div id="results"></div>
-        
-        <form method="post" action="/showTable" role="form">
-          
-          <div id="input-container" class="form group">
-            <input type="text" placeholder="Select a column/row">
-            <button id="button" type="submit">Calculate!</button>
-          </div>
-        
-        
-        </form>
+<body>
+      <h1 id="caption">Tic-Tac-Toe</h1>
+      <div id="results"></div>
+      
+      <form method="post" action="/showBoard" role="form">
+        <div id="hideMe" class="form group">
+          <button id="button" type="submit"></button>
+        </div>
+      </form>
 
+      <div id="input-container">
+        <input id="userInput" type="text" placeholder="Select a number">
+        <button onclick="getUserInput()">Make A Move</button>
+      </div>
 
 </body>
 </html>

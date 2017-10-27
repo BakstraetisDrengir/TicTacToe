@@ -1,3 +1,7 @@
+body{
+  background-color: darkturquoise;
+}
+
 
 #caption{
   text-align: center;
@@ -14,13 +18,19 @@
   font-size: 50px;
   text-align: center;
   margin: auto;
-  background-color: gray;
+  background-color: beige;
   color:rgb(48, 100, 3);
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
 }
 
 #input-container{
-  
   text-align: center;
   margin-top: 20px;
 
+}
+
+#hideMe{
+  visibility: hidden;
 }
