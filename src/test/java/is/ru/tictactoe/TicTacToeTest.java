@@ -25,4 +25,15 @@ public class TicTacToeTest{
       g.markChoice('1');
       assertEquals(false,g.validateMove('1'));
     }
+
+    @Test
+    public void TestForWinInRow(){
+      CreateGame g = new CreateGame();
+      g.getUserInput('1');
+      g.getUserInput('4');
+      g.getUserInput('2');
+      g.getUserInput('5');
+      g.getUserInput('3');
+      assertEquals(true, g.rowWin());
+    }
 }
