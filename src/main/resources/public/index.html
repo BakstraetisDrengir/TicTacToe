@@ -10,22 +10,18 @@
       crossorigin="anonymous"></script>
       <script type="text/javascript" src="script.js"></script>
       <link rel="stylesheet" type="text/css" href="style.css">
-  
+
   </head>
 <body>
       <h1 id="caption">Tic-Tac-Toe</h1>
       <div id="results"></div>
-      
-      <form method="post" action="/showBoard" role="form">
-        <div id="hideMe" class="form group">
-          <button id="button" type="submit"></button>
-        </div>
-      </form>
 
-      <div id="input-container">
-        <input id="userInput" type="text" placeholder="Select a number">
-        <button onclick="getUserInput()">Make A Move</button>
-      </div>
+      <form method="post" action="/playersmove" class="form-inline" role="form">
+        <div class="form group">
+          <input type="text" name="number" id="number">
+        </div>
+        <button type="submit">Select</button>
+      </form>
 
 </body>
 </html>
