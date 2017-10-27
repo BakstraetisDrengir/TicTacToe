@@ -21,9 +21,22 @@ public class TicTacToe{
           String inputstring =  req.queryParams("input");
           char input = inputstring.charAt(0);
           if(newGame.getUserInput(input)) {
-            return newGame.displayGameBoard();
+            String output = newGame.displayGameBoard() + "<br>";
+            if(newGame.isWin()){
+              output+= "<h2 style=\"color:green;\">" + newGame.getWinner() + " Wins</h2>";
+            }
+            else if (newGame.draw()) {
+              output += "<h2 style=\"color:purple;\">It's a Draw</h2>";
+            }
+            else {
+              output+= "<h2>" + newGame.getplayer()+ "\'s turn</h2>";
+            }
+            return output;
           }
-          return "Error n stuff";
+          if(newGame.isWin()||newGame.draw()) {
+            return newGame.displayGameBoard() + "The Game is over!, go read a book";
+          }
+          return newGame.displayGameBoard() + "<br><h2 style=\"color:red;\">Illegal Move!</h2><br><h2>" + newGame.getplayer()+ "\'s turn</h2>";
         });
 
 
