@@ -7,6 +7,7 @@ public class CreateGame{
     static char arr [][];
     char userInput;
 	  char player;
+    char winner;
 
     // Constructor
     public CreateGame()
@@ -186,6 +187,9 @@ public class CreateGame{
     	        player = 'X';
     	    }
     	}
+      public char getplayer() {
+        return player;
+      }
 
       public boolean rowWin() {
           for (int i = 0; i < 3 ; i++)

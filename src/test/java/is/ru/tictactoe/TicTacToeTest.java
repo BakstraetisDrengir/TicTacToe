@@ -36,4 +36,20 @@ public class TicTacToeTest{
       g.getUserInput('3');
       assertEquals(true, g.rowWin());
     }
+
+
+
+
+
+
+
+
+
+
+
+    @Test
+    public void TestGetPlayer(){
+      CreateGame g = new CreateGame();
+      assertEquals('X', g.getplayer());
+    }
 }
