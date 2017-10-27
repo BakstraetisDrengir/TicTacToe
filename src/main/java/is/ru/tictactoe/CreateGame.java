@@ -8,6 +8,7 @@ public class CreateGame{
     char userInput;
 	  char player;
     char winner;
+    int counter;
 
     // Constructor
     public CreateGame()
@@ -42,6 +43,8 @@ public class CreateGame{
     if(checkValidity(input) && validateMove(input)) {
       markChoice(input);
       changePlayer();
+      counter++;
+      draw();
       return true;
     }
 		return false;
@@ -226,6 +229,23 @@ public class CreateGame{
           return false;
       }
 
+      public boolean draw() {
+
+          if (counter == 9) {
+             return true;
+          }
+          return false;
+      }
+
+      public boolean isWin() {
+          if (colWin() || rowWin() || diagnonalWin()) {
+            return true;
+          }
+          else {
+            return false;
+          }
+
+      }
 
 
 }
