@@ -10,7 +10,7 @@ body{
   margin-top:50px;
   margin-bottom: 50px;
   font-size: 50px;
-  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-family: 'Pacifico', cursive;
   color:darkslateblue;
 
 }
@@ -18,13 +18,15 @@ body{
 #results {
   width: 300px;
   font-size: 50px;
+  font-family: 'Play', sans-serif;
   text-align: center;
   margin: auto;
   background-color: beige;
-  color:rgb(48, 100, 3);
+  color: darkblue;
   border-width: 5px;
   border-color: black;
   border-style: solid;
+  border-radius: 10%;
 }
 
 #input-and-submit{
