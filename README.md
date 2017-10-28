@@ -11,7 +11,9 @@
 ## Manuals 
 * ### [Development manual](https://github.com/BakstraetisDrengir/TicTacToe/blob/master/docs/development_manual.md)
 
-* ### [Administration manual](https://github.com/BakstraetisDrengir/TicTacToe/blob/master/docs/administration_manual.md) 
+* ### [Administration manual](https://github.com/BakstraetisDrengir/TicTacToe/blob/master/docs/administration_manual.md)
+
+* ### [Design report](https://github.com/BakstraetisDrengir/TicTacToe/blob/master/docs/design_report.md)
 
 ## R.I.P 
 * ### Hróðmar Valur Steinsson

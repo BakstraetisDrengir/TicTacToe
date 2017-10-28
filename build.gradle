@@ -9,6 +9,7 @@
 // Apply the java-library plugin to add support for Java Library
 apply plugin: 'java-library'
 apply plugin: 'application'
+apply plugin: 'jacoco'
 mainClassName = "is.ru.tictactoe.TicTacToe"
 
 // In this section you declare where to find the dependencies of your project
@@ -44,6 +45,14 @@ dependencies {
 task stage {
     dependsOn  installDist
 }
+
+jacocoTestReport {
+      reports {
+	    xml.enabled false
+	    csv.enabled false
+      }
+}
+test.finalizedBy(jacocoTestReport)
 
 task selenium(type: Test, dependsOn: installDist) {
   testClassesDir = sourceSets.selenium.output.classesDir
