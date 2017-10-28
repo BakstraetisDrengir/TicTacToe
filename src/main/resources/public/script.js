@@ -1,5 +1,6 @@
 $(document).ready(function() {
-      var form = $('form');
+      var form = $('#move');
+      var form2 = $('#newgame');
       form.submit(function( event ) {
         var number = $("#number").val();
         $.ajax({
@@ -15,7 +16,16 @@ $(document).ready(function() {
         });
         event.preventDefault();
       });
-
+      form2.submit(function( event ) {
+        $.ajax({
+            type: form2.attr('method'),
+            url: form2.attr('action')
+          }).done(function(result) {
+            $('#results').html(result).attr('class', 'alert alert-success');
+            document.getElementById("number").value = "";
+          });
+        event.preventDefault();
+      });
 
 
     });
