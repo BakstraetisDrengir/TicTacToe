@@ -36,9 +36,6 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 
-    // Selenium 
-    testCompile 'org.testng:testng:6.10'
-
     seleniumCompile 'junit:junit:4.12'
     seleniumCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
 
@@ -47,10 +44,6 @@ dependencies {
 task stage {
     dependsOn  installDist
 }
-
-mainClassName = 'is.ru.tictactoe.TicTacToe'
-
-test.useTestNG()
 
 task selenium(type: Test, dependsOn: installDist) {
   testClassesDir = sourceSets.selenium.output.classesDir
@@ -65,9 +58,8 @@ task selenium(type: Test, dependsOn: installDist) {
                   'build/install/TicTacToe/bin/TicTacToe &'.execute()
                   break
               case 'windows':
-                  'build/install/TicTacToe/bin/TicTacToe'.execute()
+                  'build/install/TicTacToe/bin/TicTacToe.bat'.execute()
                   break
           }
       }
 }
-
