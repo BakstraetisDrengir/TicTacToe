@@ -7,7 +7,7 @@ body{
 #caption{
   text-align: center;
   margin: auto;
-  margin-top:100px;
+  margin-top:50px;
   margin-bottom: 50px;
   font-size: 50px;
   font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua", Georgia, serif;
@@ -27,12 +27,12 @@ body{
   border-style: solid;
 }
 
-#hideMe{
-  visibility: hidden;
-}
-
 #input-and-submit{
   text-align: center;
   margin: auto;
   margin-top: 50px;
+}
+
+#submit-button{
+  color:red;
 }
