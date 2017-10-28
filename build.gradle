@@ -18,6 +18,10 @@ repositories {
     jcenter()
 }
 
+sourceSets {
+  selenium
+}
+
 dependencies {
 
     compile 'com.sparkjava:spark-core:2.6.0'
@@ -32,8 +36,38 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 
+    // Selenium 
+    testCompile 'org.testng:testng:6.10'
+
+    seleniumCompile 'junit:junit:4.12'
+    seleniumCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
+
 }
 
 task stage {
     dependsOn  installDist
 }
+
+mainClassName = 'is.ru.tictactoe.TicTacToe'
+
+test.useTestNG()
+
+task selenium(type: Test, dependsOn: installDist) {
+  testClassesDir = sourceSets.selenium.output.classesDir
+  classpath = sourceSets.selenium.runtimeClasspath
+
+  ant.condition(property: "os", value: "windows") { os(family: "windows") }
+  ant.condition(property: "os", value: "unix"   ) { os(family: "unix")    }
+  
+  doFirst {
+          switch(ant.properties.os) {
+              case 'unix':
+                  'build/install/TicTacToe/bin/TicTacToe &'.execute()
+                  break
+              case 'windows':
+                  'build/install/TicTacToe/bin/TicTacToe'.execute()
+                  break
+          }
+      }
+}
+
