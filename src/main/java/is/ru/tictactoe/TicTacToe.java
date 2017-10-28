@@ -12,7 +12,7 @@ public class TicTacToe{
         port(getHerokuPort());
 
         post(
-            "/showBoard",(req, res) -> {
+            "/newgame",(req, res) -> {
                 newGame.ResetGame();
                 return newGame.displayGameBoard();
             }
