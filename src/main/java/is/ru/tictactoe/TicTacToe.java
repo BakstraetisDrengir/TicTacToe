@@ -14,7 +14,8 @@ public class TicTacToe{
         post(
             "/newgame",(req, res) -> {
                 newGame.ResetGame();
-                return newGame.displayGameBoard();
+                String output = newGame.displayGameBoard() + "<h2>" + newGame.getplayer()+ "\'s turn</h2>";
+                return output;
             }
         );
         post("/playersmove", (req, res) -> {

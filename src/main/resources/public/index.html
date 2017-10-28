@@ -8,7 +8,7 @@
       <!-- Here below are the fonts we use  (Google CDN Fonts) -->
       <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Pacifico|Play" rel="stylesheet">
-      
+
       <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -20,15 +20,17 @@
 <body>
       <h1 id="caption">Tic-Tac-Toe</h1>
       <div id="results" class="alert alert-success"><h1>1 2 3 <br>4 5 6 <br>7 8 9 <br></h1><br><h2>X's turn</h2></div>
-      
-      <form method="post" action="/playersmove" class="form-inline" role="form">
+
+      <form id="move" method="post" action="/playersmove" class="form-inline" role="form">
         <div id="input-and-submit" class="form group">
           <input type="text" class="form-control input-lg" name="number" id="number" maxlength="1" placeholder="Enter a number">
           <button type="submit" class="btn btn-default btn-lg">Select</button>
         </div>
       </form>
 
-      <button class="btn btn-primary btn-lg">New Game</button>
+      <form id="newgame" method="post" action="/newgame">
+        <button type="submit" class="btn btn-primary btn-lg">New Game</button>
+      </form>
 
 
 </body>
