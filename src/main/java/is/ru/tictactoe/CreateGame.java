@@ -40,7 +40,7 @@ public class CreateGame{
 
     // This method gets and returns the user input
 	public boolean getUserInput(char input) {
-    if(checkValidity(input) && validateMove(input)) {
+    if(checkValidity(input) && validateMove(input) && !isWin()) {
       markChoice(input);
       if (isWin()) {
          winner = player;
