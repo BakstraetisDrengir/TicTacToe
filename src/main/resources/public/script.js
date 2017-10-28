@@ -8,12 +8,14 @@ $(document).ready(function() {
           data: 'input=' + number
         }).done(function(result) {
           $('#results').html(result).attr('class', 'alert alert-success');
+          // This cleans the input field
+          document.getElementById("number").value = "";
         }).fail(function() {
           $('#results').html('Error, Illegal string...').attr('class', 'alert alert-danger');
         });
         event.preventDefault();
       });
 
-      
+
 
     });
