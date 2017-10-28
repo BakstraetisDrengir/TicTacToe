@@ -35,6 +35,12 @@ body{
   margin-top: 50px;
 }
 
-#submit-button{
-  color:red;
+#new-game{
+  width: 20%;
+  margin-top: 20px;
+}
+
+#ng-button{
+  text-align: center;
+  margin: auto;
 }
