@@ -21,6 +21,7 @@ repositories {
 
 sourceSets {
   selenium
+  seleniumXvfb
 }
 
 dependencies {
@@ -39,6 +40,9 @@ dependencies {
 
     seleniumCompile 'junit:junit:4.12'
     seleniumCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
+
+    seleniumXvfbCompile 'junit:junit:4.12'
+    seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
 
 }
 
@@ -71,4 +75,20 @@ task selenium(type: Test, dependsOn: installDist) {
                   break
           }
       }
+}
+
+task seleniumXvfb(type: Test, dependsOn: installDist) {
+    testClassesDir = sourceSets.selenium.output.classesDir
+    classpath = sourceSets.selenium.runtimeClasspath
+
+    environment "DISPLAY", ":99"
+
+    doFirst {
+        'bin/xvfb start'.execute()
+        'build/install/Project/bin/Project &'.execute()
+    }
+
+    doLast {
+        'sh -e /etc/init.d/xvfb stop'.execute()
+    }
 }

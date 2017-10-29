@@ -6,3 +6,9 @@ deploy:
   api_key:
     secure: quThIe4jZrD9tA6nQERrXBKOb6GrTqiMjVH+BJkcDh33wbKrSVROs3wrO6k4w7qJlaxEkH5tNEL7KW6+Su0hec6diyuZuALnhvnZG9R0q3Oqn3fJNUE9K9QQEVWyRxTLnEeb57digI8uKFqau0egNQK6kSjeX119TigW2fIJDBf/el0oTmAUEaXWuIEuqxJ2ocVgUbpjWcyKePbfqw+sk8mEUXiMHk695gGNaseXYQORshenMLFN+6rfjmAp/Yxr5eVWpSz3poaPLlRx+1RHMxAYJtgPYRc6rwS9QbBLScrtATFLGyd/UKGWV428tuXCJfaaHNxL6/i0PZWSIVc2uOhN98A2ebWnCpt8ZmnoM+C1L2erqkQB7TVVdFj3EzKMmAUdRrSzQwS+aVzIWyaIGkWemXrPylqdi8oc3e+YKe7Je8XJAhngnx2c+FpZPK3RX22dbAe3yHktYxfH3zsOFMqB/Ocr6Roti+pnPmlgtDEsyVrDKH0bqLGGkcmNAppQ/G+z5vZinn209Ex9TySwnHx/mKg1zNVObUWKEg3RTbs/PFhIl2pNEv5nWp1trnfJGqlX0Yzrn/6Zo0H8LcEIYtjoOCTv/ymt02/7NjGV/p+hMROYNXOvibrt1/UhXBr4RUr+lbcXNhjVykC+S79ntpMkS6XgKqYo5ALVLi0eMuo=
   app: tictactoe-bakstraetisdrengir
+
+script:
+  - ./gradlew clean
+  - ./gradlew check
+  - ./gradlew build
+  - ./gradlew seleniumXvfb

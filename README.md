@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/BakstraetisDrengir/TicTacToe.png)](https://travis-ci.org/BakstraetisDrengir/TicTacToe)
 # TicTacToe
+Play the game :
+* https://tictactoe-bakstraetisdrengir.herokuapp.com/
 
 ## Authors 
  ### **Bakstraetis Drengir**:
