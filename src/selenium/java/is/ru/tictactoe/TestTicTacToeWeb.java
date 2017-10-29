@@ -14,25 +14,25 @@ public class TestTicTacToeWeb extends SeleniumTestWrapper {
     assertEquals("TicTacToe", driver.getTitle());
   }
 
-
   // Check to see if user input gets into the input field
   @Test
   public void testUserInput() throws Exception {
     driver.get(baseUrl);
     // User input
     WebElement input = driver.findElement(By.id("number"));
-    input.sendKeys("9");
+    // A number is put into the input field
+    input.sendKeys("5");
     Thread.sleep(2000);
     WebElement inField = driver.findElement(By.id("number"));
     String result = inField.getAttribute("value");
-
-    assertEquals("9", result);  
+  
+    assertEquals("5", result);  
   }
 
-  // Check if new game button works correctly
+  // Check to see if the select button works
   @Test
-    public void newGameTest() throws Exception {
-      /*driver.get(baseUrl);
+    public void selectButtonTest() throws Exception {
+      driver.get(baseUrl);
       // User input
       WebElement input = driver.findElement(By.id("number"));
       input.sendKeys("9");
@@ -40,23 +40,15 @@ public class TestTicTacToeWeb extends SeleniumTestWrapper {
       WebElement button = driver.findElement(By.tagName("button")); 
       button.submit();
       Thread.sleep(2000);
-      WebElement newGame = driver.findElement(By.id("new-game")); 
-      Thread.sleep(2000);
-      newGame.submit();
-      Thread.sleep(2000);
+      input = driver.findElement(By.id("number"));
+      String inputFormAfterSelect = input.getAttribute("value");
       
-      // PROBLEM BEGIN HERE BELOW!
-
-      String expectedResult = "<h1>1 2 3 <br>4 5 6 <br>7 8 9 <br></h1>";
-      WebElement result = driver.findElement(By.id("result")); 
-      String sResult = result.getAttribute("innerHTML");
-      
-      assertEquals("a", "a");*/  
-      //assertEquals(sResult, expectedResult);  
-
+      // The expected result is an empty string
+      // because after the select button is pressed
+      // the input field is cleared.
+      String expectedResult = "";
+      // Hence if the inputFormAfterSelect is an empty string
+      // the button works correctly.
+      assertEquals(inputFormAfterSelect, expectedResult);  
   }
-
-
-
-
 }
