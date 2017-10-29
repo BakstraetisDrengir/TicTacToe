@@ -2,8 +2,6 @@ body{
   background-color: darkturquoise;
 }
 
-
-
 #caption{
   text-align: center;
   margin: auto;
@@ -12,7 +10,6 @@ body{
   font-size: 50px;
   font-family: 'Pacifico', cursive;
   color:darkslateblue;
-
 }
 
 #results {
