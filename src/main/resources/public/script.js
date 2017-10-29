@@ -11,9 +11,7 @@ $(document).ready(function () {
       $('#results').html(result).attr('class', 'alert alert-success');
       // This cleans the input field
       document.getElementById("number").value = "";
-    }).fail(function () {
-      $('#results').html('Error, Illegal string...').attr('class', 'alert alert-danger');
-    });
+    })
     event.preventDefault();
   });
   form2.submit(function (event) {
