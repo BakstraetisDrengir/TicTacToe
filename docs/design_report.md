@@ -1,3 +1,4 @@
+## [Download as pdf](https://gitprint.com/BakstraetisDrengir/TicTacToe/blob/master/docs/design_report.md)
 # Desing report
 
 ## About the assignment 

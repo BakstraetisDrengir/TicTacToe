@@ -1,4 +1,4 @@
-
+## [Download as pdf](https://gitprint.com/BakstraetisDrengir/TicTacToe/blob/master/docs/development_manual.md)
 # Development manual: 
 
 This project was developed using the Github, Java V 1.8, Spark Framework, Travis CI, Selenium and Heroku.

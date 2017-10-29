@@ -1,4 +1,4 @@
-
+## [Download as pdf](https://gitprint.com/BakstraetisDrengir/TicTacToe/blob/master/docs/administration_manual.md)
 # Administration manual:
 
 This project was developed using the Github, Java V 1.8, Spark Framework, Travis CI, Selenium and Heroku.
