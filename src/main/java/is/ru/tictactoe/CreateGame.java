@@ -4,7 +4,7 @@ package is.ru.tictactoe;
 import java.util.Scanner;
 
 public class CreateGame {
-    // The array is a member variable
+    // The array is a member variable, :)
     static char arr[][];
     char userInput;
     char player;
@@ -63,7 +63,7 @@ public class CreateGame {
         return false;
     }
 
-    // Check square  
+    // Check square
     public static boolean validateMove(char num) {
         if (num == '1') {
             if (arr[0][0] == 'X' || arr[0][0] == 'O') {
@@ -160,12 +160,12 @@ public class CreateGame {
         }
     }
 
-    // 
+    //
     public char getplayer() {
         return player;
     }
 
-    // Check for row win 
+    // Check for row win
     public boolean rowWin() {
         for (int i = 0; i < 3; i++) {
             if (arr[i][0] == arr[i][1] && arr[i][1] == arr[i][2]) {
